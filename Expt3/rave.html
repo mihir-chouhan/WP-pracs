@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Setting sun
+</title>
+<style>
+body{
+	position : relative;
+	overflow : hidden ;
+	width  :100% ;
+	height : 100vh;
+}
+#upper{
+	position : relative;
+	background-color : blue ;
+	width : 100%;
+	height : 50%;
+}
+#down{
+	position : relative;
+	background-color : green ;
+	width : 100%;
+	height : 50%;
+}
+#sun{
+	position : relative;
+	animation-name : sunset ;
+	animation-duration : 10s ;
+	animation-iteration-count :infinite;
+}
+@keyframes sunset {
+  0% {
+    top : 0%;
+  }
+  25% {
+    top: 30%;
+  }
+  75% {
+    top : 60%;
+  }
+  100% {
+    top : 100%;
+  }
+}
+/*body{
+	animation-name : rave ;
+	animation-duration : 2s;
+	animation-iteration-count : infinite ;
+	width : 100%;
+	height : 100vh;
+	overflow : hidden;
+}
+@keyframes rave{
+	0%{background-color : black;}
+	10%{background-color : white;}
+	20%{background-color : gray;}
+	30%{background-color : orange;}
+	40%{background-color : yellow;}
+	50%{background-color : red;}
+	60%{background-color : blue;}
+	70%{background-color : green;}
+	80%{background-color : hotpink;}
+	90%{background-color : beige;}
+	100%{background-color : purple;}
+}*/
+</style>
+<body>
+<div id = "upper">
+	<p style="text-align: center;" id="sun">
+		<img src = "http://www.vikinganswerlady.com/Stars/Heraldry_SVG_Images/Sun.svg" height=300>
+	</p>
+</div>
+<div id = "down">
+<a href="trans.html">
+	<p style="text-align: center ; color : white;margin: 0px;padding: 0px;position: fixed; top: 90%;">
+		<button>Click here to see 2D 3D transformations</button>
+	</p>
+</a></div>
+</body>
+</html>
