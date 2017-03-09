@@ -32,3 +32,6 @@
 		height: auto;
 		top: 95%;
 	}
+	#colname:hover{
+		opacity: 0.5;
+	}
