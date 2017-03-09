@@ -1,0 +1,34 @@
+@font-face {
+    	font-family: "myFirstFont";
+    	src: url(./assets/font/HOMOARAK.ttf);
+	}
+	body{
+		 background: url(http://www.w3schools.com/css/img_fjords.jpg)  right top no-repeat, url(http://www.gettyimages.in/gi-resources/images/Embed/new/embed2.jpg) no-repeat;
+		background-size : 30%, 100% , auto;
+		background-attachment : fixed;
+		overflow: hidden;
+	}
+	#a{
+		font-family: "myFirstFont";
+		font-stretch: ultra-expanded; 
+	}
+	#b{
+		font-size: 50px;
+	}
+	#c{
+		font-family: "Comic Sans ms";
+		font-weight:300;
+		font-variant: small-caps;
+	}
+	section{
+		border : 5px solid grey;
+		margin : 10px 800px 10px 100px;
+		padding : 10px 20px 30px 40px;
+		border-radius: 10px 20px 40px 80px;
+	}
+	footer{
+		position: fixed;
+		width: 100%;
+		height: auto;
+		top: 95%;
+	}
