@@ -1,0 +1,41 @@
+<style>
+	#homesec{
+		margin : 0 auto;
+		padding: 0px;
+		color: white;
+	}
+	#quote{
+		font-family: "monotype corsiva";
+		text-align: center;
+		font-size: 50px;
+		color: white;
+		display: block;
+	}
+	#left{
+		height: auto;
+		font-size: 30px;
+		font-family: "Comic sans ms";
+	}
+	#loc{
+		color: white;
+		font-variant: small-caps;
+	}
+	#box{
+		height: 200px;
+		width: 200px;
+		background-color: green;
+		display: inline-block;
+		margin-top: 1%;
+		margin-left: 5%;
+	}
+	a:link{
+		color: white;
+	}
+	a:hover{
+		color: grey;
+		text-decoration: none;
+	}
+	a:visited {
+    color: white;
+	}
+</style>
