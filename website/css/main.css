@@ -1,0 +1,68 @@
+	body{
+		background-color: black;
+	}
+
+	#main{
+		overflow-x: hidden;
+		height: 100%;
+		width: 100%;
+		padding: 0px;
+
+	}
+	#head{
+		height: 50px;
+		width: auto;
+		background-color: lightgrey;
+	}
+	#top{
+		float: right;
+		margin-top: 10px;
+		margin-right: 15px;
+	}
+	#topstuff{
+		padding-top: 5px;
+		padding-left: 10px;
+	}
+
+
+	.sidenav{
+	    height: 100%	;
+	    width: 0;
+	    position: fixed;
+	    z-index: 1;
+	    top: 0;
+	    left: 0;
+	    background-color: lightgrey;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+	}
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 15px;
+	    color: black!important;
+	    display: block;
+	    transition: 0.3s;
+	}
+
+	.sidenav a:hover, .offcanvas a:focus{
+	    color: white!important;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+
+	#bg{
+		position: fixed;
+		height: 100%;
+		width: 110%;
+		opacity: 0.3;
+		size: cover;
+	}
