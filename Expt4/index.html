@@ -6,44 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" /><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
 	<title>Document</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/normalize.css">
-	<link rel="stylesheet" href="./css/style.css">
 </head>
+<style>
+	body{
+		background-color: beige;
+		color : black;
+		background-image: url("http://www.svgrepo.com/show/13961/burger.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	p{
+		padding: 0px;
+		margin-bottom: 0px; 
+		color : black;
+	}
+	#box{
+		margin-left : 27%;
+		margin-right: 27%;
+		/*margin-top: 8%;*/
+		border: 5px solid black;
+		background: lightgrey;
+	}
+	a{
+		color : black;
+		text-decoration: none;
+	}
+</style>
 <body>
-	<header>
-		<div class="container">
+<h1 align="center">LOGIN HERE!</h1>
+<section>
+	<div class="container" id="box">
+		<form action="">
 			<div class="row">
-				<div id="buttons">
-					<button class="btn"><a href="login.html" id="b">Sign In</a></button>
-					<button class="btn"><a href="registration.html" id="b">Sign Up</a></button>
+
+				<!-- username -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Username :</b></p></div>
+				<div><input id="nam" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- email-id -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Email-id :</b></p></div>
+				<div><input id="mail" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+	
+				<!-- password -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Password : </b></p></div>
+				<div><input id="pass1" type="Password" size="79" placeholder="Password must be Alphanumeric" style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- confirm password -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Confirm Password : </b></p></div>
+				<div><input id="pass2" type="Password" size="79" placeholder="Must match the above section"  style="height: 30px; margin-left: 10px;" onkeydown="test()"></div>
+
+				<!-- gender -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Gender :</b></p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="mal" type="radio" size="79"  style=" margin-left: 10px;">Male</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="femal" type="radio" size="79"  style=" margin-left: 10px;">Female</p></div>
+
+				<!-- Phone number -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Phone number : </b></p></div>
+				<div><input id="phone" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- checkboxes -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Checkboxes :</b></p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c1" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox1</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c2" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox2</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c3" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox3</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c4" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox4</p></div>
+
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">	
+					<p style="text-align: center;margin-bottom: 10px;">
+						<button id="mno"><a id="01" onclick="func()">Login</a></button>
+						<input type="reset">
+					</p>
 				</div>
 			</div>
-		</div>
-	</header>
-	<section style="background-color: lightgrey;">
-		<div>
-			<pre style="color: black; background-color:lightgrey;font-size: 20px;text-align: left;">
-				Welcome to my page! If you've not yet signed up please <a href="registration.html">SIGN UP</a>.
-				If already signed up then <a href="login.html">Sign in</a>.
-			</pre>
-		</div>
-	</section>
-	<figure>
-		<figcaption><center><img src="./assets/images/1.svg.png" alt="" width="38%"></center></figcaption>
-	</figure>
-	<footer class="footer">
-		<div class="container">
-			<div class="" style="display:inline">
-                <a href="#">FB<i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-	            <a href="#">TW<i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-	            <a href="#">YT<i id="social-gp" class="fa fa-youtube-play fa-3x social"></i></a>
-	            <a href="#">IG<i id="social-em" class="fa fa-instagram fa-3x social"></i></a>
-			</div>	
-			<p class="text-muted">
-					Copyright &copy; MihirChouhan
-			</p>
-		</div>
-	</footer>
+		</form>	
+	</div>
+</section>
+<a href="changecss.html"><button>Click here to see change in css using javascript</button></a>
+<a href="obj.html"><button>Click here to see oop in javascript</button></a>
 </body>
+<script src="./js/validate.js"></script>
 </html>
