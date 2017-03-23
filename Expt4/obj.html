@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>JS</title>
+</head>
+
+<body>
+	<button onclick="show()">click</button><br>
+	<div id="name"></div>
+	<a href="index.html"><button type="button">Go back</button></a>
+</body> 
+
+
+<script>
+	var person = {
+				    firstName : "John",
+				    lastName  : "Doe",
+				    age       : 50,
+				    eyeColor  : "blue"
+				};
+
+	function show()
+	{
+		document.getElementById("name").innerHTML =	person.firstName + " " + person.lastName;
+	}
+</script>
+
+</html>

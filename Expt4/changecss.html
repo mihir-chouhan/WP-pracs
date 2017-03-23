@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>We successfully display personalized message to user on clicking login.</p>
+	<input type="button" value="Login" onclick="alert('nice')">
+	<hr>
+	<p id="abc">This is an old content</p>
+	<input type="button" value="Click to change the above line" onclick="changeC()">
+	<hr>
+	<p id="xyz">This text will move to position you click on</p>
+	<input type="button" value="left" onclick="left()">
+	<input type="button" value="center" onclick="center()">
+	<input type="button" value="right" onclick="right()"><br><br>
+	<hr>
+	<input type="color" id="color" value="#ffffff">
+	<input type="button" value="Click to change background color" onclick="bg()">
+	<hr>
+	<a href="index.html"><button type="button">Go back</button></a>
+</body>
+<script>
+function bg(){
+	document.body.style.backgroundColor=document.getElementById("color").value;
+}
+function left(){
+	document.getElementById("xyz").align="left";
+}
+function right(){
+	document.getElementById("xyz").align="right";
+}
+function changeC(){
+	document.getElementById("abc").innerHTML = "This is new content";
+}
+function center(){
+	document.getElementById("xyz").align="center";
+}
+
+</script>
+</html>
