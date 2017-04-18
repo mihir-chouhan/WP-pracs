@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" /><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		background-color: beige;
+		color : black;
+		background-image: url("http://www.svgrepo.com/show/13961/burger.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	p{
+		padding: 0px;
+		margin-bottom: 0px; 
+		color : black;
+	}
+	#box{
+		margin-left : 27%;
+		margin-right: 27%;
+		/*margin-top: 8%;*/
+		border: 5px solid black;
+		background: lightgrey;
+	}
+	a{
+		color : black;
+		text-decoration: none;
+	}
+</style>
+<body>
+<h1 align="center">LOGIN HERE!</h1>
+<section>
+	<p id="demo" style="text-align:center ; color : red; height:50px; width : 100%;">
+	</p>
+	<div class="container" id="box">
+		<form action="">
+			<div class="row">
+				
+
+				<!-- username -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Username :</b></p></div>
+				<div><input id="nam" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- email-id -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Email-id :</b></p></div>
+				<div><input id="mail" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+	
+				<!-- password -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Password : </b></p></div>
+				<div><input id="pass1" type="Password" size="79" placeholder="Password must be Alphanumeric" style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- confirm password -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Confirm Password : </b></p></div>
+				<div><input id="pass2" type="Password" size="79" placeholder="Must match the above section"  style="height: 30px; margin-left: 10px;" onkeydown="test()"></div>
+
+				<!-- gender -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Gender :</b></p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="mal" type="radio" size="79"  style=" margin-left: 10px;">Male</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="femal" type="radio" size="79"  style=" margin-left: 10px;">Female</p></div>
+
+				<!-- Phone number -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Phone number : </b></p></div>
+				<div><input id="phone" type="text" size="79"  style="height: 30px; margin-left: 10px;"></div>
+
+				<!-- checkboxes -->
+				<div><p style="font-size: 30px;margin-left: 10px;"><b>Checkboxes :</b></p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c1" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox1</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c1" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox2</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c1" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox3</p></div>
+				<div><p style="font-size: 30px;margin-left: 10px; margin-top: 0px"><input id="c1" type="checkbox" name="gender" size="79"  style=" margin-left: 10px;">Checkbox4</p></div>
+
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">	
+					<p style="text-align: center;margin-bottom: 10px;">
+						<button id="mno">Login</button>
+						<input type="reset">
+					</p>
+				</div>
+			</div>
+		</form>	
+	</div>
+</section>
+</body>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function()
+	{
+		$('#mno').click(function()
+		{
+			//Name validation
+			var f = $('#nam').val();
+			if (f.length == 0)
+			{
+				$('#demo').text("* All fields are mandatory*");
+				$('#nam').focus();
+				return false;
+			}
+			//Email Validation
+			var a = $('#mail').val();
+			var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+			if(!a.match(email_regex) || a.length ==0)
+			{
+				$('#demo').text("*Enter a valid email id*");
+				$('#mail').focus();
+				return false;
+			}
+			//Password Validation
+			var p = $('#pass1').val();
+			var p1 = $('#pass2').val();
+			if(p.length==0)
+			{
+				$('#demo').text("*Enter password*");
+				$('#pass1').focus();
+				return false;
+			}
+			if(p!=p1)
+			{
+				$('#demo').text("*Passwords don't match*");
+				$('#pass2').focus();
+				return false;
+			}
+			//Gender Validation
+			var g = $('#mal:checked').val();
+			var g1 = $('#femal:checked').val();
+			if(g==g1)
+			{
+				$('#demo').text("*Select one gender*");
+				$('#demo').focus();
+				return false;
+			}
+			//Phone number
+			var ph = $('#phone').val();
+			var ph1 = /^[0-9]+$/;
+			if(!ph.match(ph1) || ph.length!=5 )
+			{
+				$('#demo').text("*Enter valid phone number*");
+				$('#phone').focus();
+				return false;
+			}
+			//Checkbxoes validation
+			var ch = $('#c1:checked').length;
+			if(ch==0)
+			{
+				$('#demo').text("*Please select one option*");
+				$('#demo').focus();
+				return false;
+			}
+		});
+	});
+</script>
+</html>
