@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jquery</title>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<style type="text/css">
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: khaki;
+    }
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).slideUp();
+    });
+    $("p.appear").click(function(){
+        $(this).slideDown(2000);
+    });
+    $(".hide-btn").click(function(){
+        $("div").hide("slow",function(){
+        	alert("All contents are hidden");
+        });
+    });
+    $(".show-btn").click(function(){
+        $("div").show();
+    });
+    $("button.big").click(function(){
+        $("p").animate({fontSize:'+=10px'});
+    });
+    $("button.small").click(function(){
+        $("p").animate({fontSize:'-=10px'});
+    });
+    $("button.fadeout").click(function(){
+        $("div").fadeOut("slow");
+    });
+    $("button.fadein").click(function(){
+        $("div").fadeIn("10000");
+    }); 
+    $("#image").click(function(){
+        $(this).animate({
+            opacity: '0.5',
+            height: '300px',
+            width: '450px'
+        });
+    });
+    $("#btn1").click(function(){
+        alert("Text: " + $("#test").text());
+    });
+    $("#btn2").click(function(){
+        $("#test").html("<b>Hello world!</b>");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="hide-btn">Hide Contents</button> 
+    <button type="button" class="show-btn">Show Contents</button>
+    <button type="button" class="big">Increase font</button>
+    <button type="button" class="small">Decrease font</button>
+    <button type="button" class="fadeout">Fade Out</button>
+    <button type="button" class="fadein">Fade In</button>
+    <button id="btn1">Get Content</button>
+    <button id="btn2">Set Content</button>
+    <div>
+        <p>Click on me and I'll disappear.</p>
+        <p class="appear">Click on me and I'll appear again.</p>
+        <img id="image" src="https://www.w3schools.com/css/trolltunga.jpg" alt="Cool Cat" height="100" width="250">
+        <p class="appear" id="test">This is original content</p>
+    </div>
+</body>
+</html> 
