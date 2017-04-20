@@ -24,6 +24,10 @@
 		color: white;
 		font-family: "Comic Sans ms";
 	}
+	#conte1{
+		color: white;
+		font-family: "Comic Sans ms";
+	}
 </style>
 
 </head>
@@ -48,23 +52,23 @@
 	</div>
 			<!-- Your code goes here -->
 	<div class="container" id="rev">
-	<p id="conte" style="font-size: 40px;color: white;">REVIEWS</p>
+	<p id="conte1" style="font-size: 40px;color: white;">REVIEWS</p>
 		<div class="row">
 			<div class="col-lg-8">
 				<p id="conte">
-					Review 1 : <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, laudantium! Eum molestiae eligendi eveniet explicabo quia error dolores sint odit facere numquam nostrum, consequuntur. Aliquam accusamus pariatur dignissimos tempora deserunt.
-					Review 2 : <br>
+					<br>Review 1 : <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, laudantium! Eum molestiae eligendi eveniet explicabo quia error dolores sint odit facere numquam nostrum, consequuntur. Aliquam accusamus pariatur dignissimos tempora deserunt.
+					<br>Review 2 : <br>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet praesentium, dicta voluptas, expedita repellat? Nulla eos excepturi ea perspiciatis assumenda, dolor ad voluptatibus veniam libero, quos, quia minus aliquid?
-					Review 3: <br>
+					<br>Review 3: <br>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos deserunt voluptatum assumenda corporis, repellendus doloribus optio in vel vero illum consequuntur, officia explicabo esse inventore, tempore. Inventore quas sed placeat.
-					Review 4: <br>
+					<br>Review 4: <br>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi quia exercitationem expedita, natus aliquam maxime, blanditiis reprehenderit molestiae dignissimos fuga. Doloremque quasi facilis mollitia aut placeat voluptate. Perspiciatis, eveniet.
 				</p>
 			</div>
 			<div class="col-lg-4">
-				<form action="">
+				<form action="#">
 					<textarea name="review" id="re" cols="50" rows="10" placeholder="Your review here" required></textarea>
-					<button class="btn">Submit</button>
+					<button id="btn1" class="btn">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -74,4 +78,16 @@
 
 </body>
 <script src="./js/nav.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+	    $("#btn1").click(function(){
+	        var a = document.getElementById("re").value;
+	        if(a!=""){
+		        $("#conte").append("<br>"+a);
+		        return false;
+		    }
+	    });
+	});
+</script>
 </html>
